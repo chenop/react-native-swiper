@@ -795,7 +795,7 @@ export default class extends Component {
         onScrollEndDrag={this.onScrollEndDrag}
         style={this.props.scrollViewStyle}
       >
-        {I18nManager.isRTL ? pages.reverse() : pages}
+        {I18nManager.isRTL && Array.isArray(pages) ? pages.reverse() : pages}
       </ScrollView>
     )
   }
